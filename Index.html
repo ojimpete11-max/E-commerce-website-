@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>StyleHaven | Fashion for Everyone</title>
+
+    <meta name="description"
+          content="Discover stylish clothing, sneakers and accessories at StyleHaven.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="#home" class="logo">Style<span>Haven</span></a>
+
+    <button class="menu-toggle" id="menu-toggle"
+            aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+    </button>
+
+    <nav class="navigation" id="navigation">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#shop" class="cart-link">
+        🛍️ Cart <span id="cart-count">0</span>
+    </a>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">YOUR STYLE. YOUR STORY.</p>
+
+            <h1>Discover Your <span>Perfect Style.</span></h1>
+
+            <p>
+                Explore fashion that matches your personality.
+                Find your next favorite look at StyleHaven.
+            </p>
+
+            <a href="#shop" class="button">Shop Collection →</a>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div>🚚 <strong>Reliable Delivery</strong></div>
+        <div>✨ <strong>Quality Styles</strong></div>
+        <div>💳 <strong>Secure Checkout</strong></div>
+        <div>💬 <strong>Customer Support</strong></div>
+    </section>
+
+    <section class="section categories" id="categories">
+        <div class="section-heading">
+            <p class="eyebrow">FIND YOUR LOOK</p>
+            <h2>Shop by Category</h2>
+            <p>Explore collections made for your lifestyle.</p>
+        </div>
+
+        <div class="category-grid">
+            <button class="category-card" data-category="Men">
+                <img
+                    src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600&q=80"
+                    alt="Men's fashion">
+                <span>Men's Fashion →</span>
+            </button>
+
+            <button class="category-card" data-category="Women">
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80"
+                    alt="Women's fashion">
+                <span>Women's Fashion →</span>
+            </button>
+
+            <button class="category-card" data-category="Shoes">
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                    alt="Fashion sneakers">
+                <span>Sneakers →</span>
+            </button>
+
+            <button class="category-card" data-category="Accessories">
+                <img
+                    src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=600&q=80"
+                    alt="Fashion watch">
+                <span>Accessories →</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="section shop" id="shop">
+
+        <div class="section-heading">
+            <p class="eyebrow">THE LATEST LOOKS</p>
+            <h2>Our Collection</h2>
+            <p>Find something you will love wearing.</p>
+        </div>
+
+        <div class="shop-controls">
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search products..."
+                aria-label="Search products">
+
+            <select id="category-filter" aria-label="Filter by category">
+                <option value="All">All Categories</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+
+            <select id="sort-filter" aria-label="Sort products">
+                <option value="default">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+            </select>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+
+        <p id="empty-message" hidden>
+            No products found. Try another search.
+        </p>
+
+    </section>
+
+    <section class="promo">
+        <div>
+            <p class="eyebrow">FRESH ARRIVALS</p>
+            <h2>Your Next Favorite Outfit Awaits.</h2>
+            <p>Discover fresh styles for your everyday wardrobe.</p>
+            <a href="#shop" class="button">Explore Collection →</a>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80"
+                alt="Modern fashion store interior">
+        </div>
+
+        <div class="about-content">
+            <p class="eyebrow">OUR STORY</p>
+            <h2>Fashion That Feels Like You.</h2>
+
+            <p>
+                At StyleHaven, we believe fashion is more than clothing.
+                It is a way to express your personality, creativity
+                and confidence.
+            </p>
+
+            <p>
+                Our collection brings together everyday essentials,
+                contemporary styles and accessories for different
+                tastes and occasions.
+            </p>
+
+            <a href="#shop" class="button">Discover Our Collection</a>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Join the StyleHaven Community</h2>
+
+        <p>Get updates about new arrivals and exclusive offers.</p>
+
+        <form id="newsletter-form">
+            <input
+                type="email"
+                id="newsletter-email"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                required>
+
+            <button type="submit" class="button">Subscribe</button>
+        </form>
+
+        <p id="newsletter-message" aria-live="polite"></p>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="section-heading">
+            <p class="eyebrow">WE'RE HERE TO HELP</p>
+            <h2>Contact Us</h2>
+            <p>Have a question about a product or order?</p>
+        </div>
+
+        <a
+            class="button"
+            href="https://wa.me/2347000000000?text=Hello%20StyleHaven%2C%20I%20have%20a%20question."
+            target="_blank"
+            rel="noopener noreferrer">
+            Chat With Us on WhatsApp
+        </a>
+
+        <p class="small-note">
+            Replace the example WhatsApp number with your store's number.
+        </p>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a href="#home" class="logo">Style<span>Haven</span></a>
+
+    <p>Fashion for every moment. Style for every story.</p>
+
+    <p>&copy; <span id="year"></span> StyleHaven. All rights reserved.</p>
+
+    <p class="portfolio-note">
+        Website concept designed by Emmanuel Web Design.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
